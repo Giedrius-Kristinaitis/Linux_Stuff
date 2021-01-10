@@ -309,8 +309,8 @@ layout_theme = init_layout_theme()
 
 
 layouts = [
-    layout.MonadTall(margin=8, border_width=2, border_focus="#5e81ac", border_normal="#4c566a"),
-    layout.MonadWide(margin=8, border_width=2, border_focus="#5e81ac", border_normal="#4c566a"),
+    layout.MonadTall(margin=5, border_width=2, border_focus="#5e81ac", border_normal="#4c566a"),
+    layout.MonadWide(margin=5, border_width=2, border_focus="#5e81ac", border_normal="#4c566a"),
     layout.Matrix(**layout_theme),
     layout.Bsp(**layout_theme),
     layout.Floating(**layout_theme),
@@ -331,8 +331,8 @@ def init_colors():
             ["#62FF00", "#62FF00"], # color 7
             ["#6790eb", "#6790eb"], # color 8
             ["#a9a9a9", "#a9a9a9"], # color 9
-			["#6666ff", "#000099"], # bar color 1
-			["#666666", "#000000"]] # bar color 2
+			["#00cc44", "#006622"], # bar color secondary
+			["#666666", "#000000"]] # bar color black
 
 colors = init_colors()
 
@@ -359,7 +359,7 @@ def init_widgets_list():
                         inactive = colors[5],
                         rounded = False,
                         highlight_method = "text",
-                        this_current_screen_border = colors[8],
+                        this_current_screen_border = "#00cc44",
                         foreground = "#FFFFFF",
                         background = colors[11]
                         ),
@@ -438,7 +438,7 @@ def init_widgets_list():
                         border_width = 1,
                         line_width = 2,
                         core = "all",
-                        type = "line",
+                        type = "linefill",
 						padding = 10,
                         ),
                widget.Memory(
@@ -455,7 +455,7 @@ def init_widgets_list():
 						border_width = 1,
 						graph_color = "#FFFFFF",
 						line_width = 2,
-						type = "line",
+						type = "linefill",
 						fill_color = "#FFFFFF",
 						border_color = "#FFFFFF",
 						padding = 10,
@@ -478,6 +478,7 @@ def init_widgets_list():
                         update_interval = 10,
                         fontsize = 16,
                         foreground = "#FFFFFF",
+						format = "{char} {percent:2.0%} {hour:d}:{min:02d}",
                         background = colors[10],
 	                    ),
 			   widget.CapsNumLockIndicator(
