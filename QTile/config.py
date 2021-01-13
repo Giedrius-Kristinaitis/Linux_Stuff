@@ -331,7 +331,7 @@ def init_colors():
             ["#62FF00", "#62FF00"], # color 7
             ["#6790eb", "#6790eb"], # color 8
             ["#a9a9a9", "#a9a9a9"], # color 9
-			["#00cc44", "#006622"], # bar color secondary
+			["#0066cc", "#001a33"], # bar color secondary
 			["#666666", "#000000"]] # bar color black
 
 colors = init_colors()
@@ -359,7 +359,7 @@ def init_widgets_list():
                         inactive = colors[5],
                         rounded = False,
                         highlight_method = "text",
-                        this_current_screen_border = "#00cc44",
+                        this_current_screen_border = "#0077e9",
                         foreground = "#FFFFFF",
                         background = colors[11]
                         ),
@@ -507,8 +507,8 @@ widgets_screen2 = init_widgets_screen2()
 
 
 def init_screens():
-    return [Screen(top=bar.Bar(widgets=init_widgets_screen1(), size=26)),
-            Screen(top=bar.Bar(widgets=init_widgets_screen2(), size=26))]
+    return [Screen(top=bar.Bar(widgets=init_widgets_screen1(), size=22)),
+            Screen(top=bar.Bar(widgets=init_widgets_screen2(), size=22))]
 screens = init_screens()
 
 
