@@ -1,6 +1,6 @@
 [Unit]
 Description=Start backlight service on boot
-After=systemd-backlight@backlight:amdgpu_bl0.service suspend.target hibernate.target hybrid-sleep.target suspend-then-hibernate.target
+After=suspend.target hibernate.target hybrid-sleep.target suspend-then-hibernate.target
 
 [Service]
 Type=oneshot
