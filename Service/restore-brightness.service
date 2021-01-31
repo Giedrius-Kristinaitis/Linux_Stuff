@@ -1,0 +1,9 @@
+[Unit]
+Description=Restore screen brightness
+
+[Service]
+Type=idle
+ExecStart=/bin/bash -c 'systemctl start systemd-backlight@backlight\:amdgpu_bl0.service'
+
+[Install]
+WantedBy=multi-user.target
